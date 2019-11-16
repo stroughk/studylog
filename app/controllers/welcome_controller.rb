@@ -7,4 +7,12 @@ class WelcomeController < ApplicationController
 
     end
 
+    def study
+
+    end
+
+    def progress
+    
+    end
+
 end
