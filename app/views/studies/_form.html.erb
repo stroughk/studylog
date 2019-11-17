@@ -1,0 +1,10 @@
+
+<%= form_for :study do |f| %>
+  Programming Language: <%= f.text_field :programming_language %><br />
+  Topic: <%= f.text_field :topic %><br />
+  Source : <%= f.text_field :source %><br />
+  Clear : <%= f.text_area :source %><br />
+  Unclear : <%= f.text_area :source %><br />
+
+  <%= f.submit %>
+<% end %>
