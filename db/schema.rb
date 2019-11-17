@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_16_200311) do
+ActiveRecord::Schema.define(version: 2019_11_17_203828) do
 
   create_table "studies", force: :cascade do |t|
     t.string "programming_language"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_11_16_200311) do
     t.integer "time_spent"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text "description"
   end
 
 end
