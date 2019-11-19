@@ -4,5 +4,11 @@
   Topic: <%= f.text_field :topic %><br />
   Source : <%= f.text_field :source %><br />
   Description : <%= f.text_area :source %><br />
+  <label for="mood"> 
+    <input id="mood" type="radio" name="mood">Ready to conquer!
+    <input id="mood" type="radio" name="mood">Just ok
+    <input id="mood" type="radio" name="mood">Not feeling it today
+  </label>
+  <br>
   <%= f.submit %>
 <% end %>
