@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav{
+    font-size: 15px;
+    background: rgb(74, 138, 241);
+    display: flex;
+    justify-content: flex-end;
+}
+
+a{
+    text-decoration: none;
+    padding: 15px;
+    color: whitesmoke;
+    transition: all 1s ease-out;
+}
+
+a:hover{
+    color: rgb(131, 96, 131);
+}
+
+@media(max-width:660px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
