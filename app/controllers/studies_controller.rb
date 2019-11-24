@@ -6,8 +6,16 @@ class StudiesController < ApplicationController
     def create
       #  render plain: params[:study].inspect
         @study = Study.new(study_params)
-        @study.save
-        redirect_to study_show(@study)
+        if @study.save
+            flash[:notice] = "Your study was logged successfully!"
+            redirect_to study_path(@study)
+        else 
+            render 'new'
+        end
+    end
+
+    def show
+        @study = Study.find(params[:id])
     end
 
     private

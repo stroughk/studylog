@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
+
   <nav>
         <a href=""><%= link_to 'Home', root_path%></a>
         <a href="about">About Me</a>
