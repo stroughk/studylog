@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'about', to: 'welcome#about'
   get 'contact', to: 'welcome#contact'
-  get 'studies', to: 'studies#new'
+  resources :studies
   
 end

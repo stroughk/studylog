@@ -1,14 +1,24 @@
-
-<%= form_for :study do |f| %>
-  Programming Language: <%= f.text_field :programming_language %><br />
-  Topic: <%= f.text_field :topic %><br />
-  Source : <%= f.text_field :source %><br />
-  Description : <%= f.text_area :source %><br />
-  <label for="mood"> 
-    <input id="mood" type="radio" name="mood">Ready to conquer!
-    <input id="mood" type="radio" name="mood">Just ok
-    <input id="mood" type="radio" name="mood">Not feeling it today
-  </label>
-  <br>
-  <%= f.submit %>
+<%= form_for @study do |f| %>
+  <p>
+    Programming Language: <%= f.text_field :programming_language %><br />
+  </P>
+  <p>
+    Topic: <%= f.text_field :topic %><br />
+  </p>
+  <p>
+    Source : <%= f.text_field :source %><br />
+  </p>
+  <p>
+    Description : <%= f.text_area :source %><br />
+  </p>
+  <p>
+    <label for="mood"> 
+      <input id="mood" type="radio" name="mood">Ready to conquer!
+      <input id="mood" type="radio" name="mood">Just ok
+      <input id="mood" type="radio" name="mood">Not feeling it today
+    </label>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
