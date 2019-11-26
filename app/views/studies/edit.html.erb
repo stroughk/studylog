@@ -1,0 +1,12 @@
+<h1>Edit Your Study</h1>
+
+<% if @study.errors.any? %>
+<h3>The following errors prevented the study to be logged:</h3>
+<ol>
+<% @study.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ol>
+<% end %>
+
+</br><%= render 'form' %>
