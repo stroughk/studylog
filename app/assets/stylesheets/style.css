@@ -14,12 +14,12 @@ nav{
 a{
     text-decoration: none;
     padding: 15px;
-    color: whitesmoke;
+    color: rgb(128, 77, 77);
     transition: all 1s ease-out;
 }
 
 a:hover{
-    color: rgb(131, 96, 131);
+    color: rgb(100, 72, 100);
 }
 
 @media(max-width:660px){
