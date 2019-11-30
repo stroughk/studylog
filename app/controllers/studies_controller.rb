@@ -38,6 +38,13 @@ class StudiesController < ApplicationController
         @study = Study.find(params[:id])
     end
 
+    def destroy
+        @study = Study.find(params[:id])
+        @study.destroy
+        flash[:notice] = "This study was successfully deleted"
+        redirect_to studies_path
+    end
+
     private
 
     def study_params
