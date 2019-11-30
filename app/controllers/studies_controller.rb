@@ -1,5 +1,6 @@
 class StudiesController < ApplicationController
-    
+    before_action :set_study, only: [:edit, :update, :show, :destroy]
+
     def index
         @studies = Study.all
     end
@@ -10,7 +11,6 @@ class StudiesController < ApplicationController
     end
 
     def edit
-        @study = Study.find(params[:id])
     end
 
     def create
@@ -25,7 +25,6 @@ class StudiesController < ApplicationController
     end
 
     def update
-        @study = Study.find(params[:id])
         if @study.update(study_params)
             flash[:notice] = "Study was successfully updated"
             redirect_to study_path(@study)
@@ -35,11 +34,9 @@ class StudiesController < ApplicationController
     end
 
     def show
-        @study = Study.find(params[:id])
     end
 
     def destroy
-        @study = Study.find(params[:id])
         @study.destroy
         flash[:notice] = "This study was successfully deleted"
         redirect_to studies_path
@@ -51,5 +48,8 @@ class StudiesController < ApplicationController
         params.require(:study).permit(:programming_language, :topic, :source, :description)
     end
    
+    def set_study
+        @study = Study.find(params[:id])
+    end
 
 end
