@@ -45,7 +45,7 @@ class StudiesController < ApplicationController
     private
 
     def study_params
-        params.require(:study).permit(:programming_language, :topic, :source, :description)
+        params.require(:study).permit(:programming_language, :topic, :source, :description, :mood)
     end
    
     def set_study

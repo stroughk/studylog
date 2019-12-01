@@ -3,4 +3,5 @@ class Study < ApplicationRecord
  validates :topic, presence: true, length: {minimum: 3, maximum: 35 }
  validates :source, presence: true, length: {minimum: 3, maximum: 50 }
  validates :description, presence: true
+ validates :mood, presence: true
 end
