@@ -3,16 +3,51 @@
 #logo {
     float: left;
     font-size: 1.7em;
-    color: rgb(109, 3, 3);
+    color: rgb(179, 40, 40);
     letter-spacing: -1px;
     font-weight: bold;
 }
 
 #logo:hover {
-    color: rgb(196, 127, 127);
+    color:rgb(34, 7, 7);
     text-decoration: none;    
 }
 
 .center {
     text-align: center;
+    color: rgb(34, 3, 3);
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-image: asset-url('coffee.jpg');
+    background-size: cover;
+    width: 1150px;
+    height: 600px;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.btn-xlarge {
+    font-size: 1em;
+    background-color: rgb(122, 118, 118);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+}
+
+footer small {
+    float: left;
 }
