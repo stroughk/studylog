@@ -17,7 +17,7 @@ class StudiesController < ApplicationController
       #  render plain: params[:study].inspect
         @study = Study.new(study_params)
         if @study.save
-            flash[:notice] = "Your study was logged successfully!"
+            flash[:success] = "Your study was logged successfully!"
             redirect_to study_path(@study)
         else 
             render 'new'
@@ -26,7 +26,7 @@ class StudiesController < ApplicationController
 
     def update
         if @study.update(study_params)
-            flash[:notice] = "Study was successfully updated"
+            flash[:success] = "Study was successfully updated"
             redirect_to study_path(@study)
         else
             render 'edit'
@@ -38,7 +38,7 @@ class StudiesController < ApplicationController
 
     def destroy
         @study.destroy
-        flash[:notice] = "This study was successfully deleted"
+        flash[:danger] = "This study was successfully deleted"
         redirect_to studies_path
     end
 
